@@ -27,13 +27,7 @@ namespace WeatherMapApiNet
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddScoped<string>((s) =>
-            //{
-            //    var key = File.ReadAllText("appsettings.json");
-            //    string conn = JObject.Parse(key).GetValue("default").ToString();
-            //    return conn;
-            //});
-
+            
             services.AddTransient<IForecastRepository, ForecastRepository>();
 
 

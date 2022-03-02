@@ -19,11 +19,15 @@
     <Folder Include="OpenWeatherMapModels\" />
     <Folder Include="Repositories\" />
     <Folder Include="Config\" />
+    <Folder Include="wwwroot\Images\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="RestSharp" Version="107.3.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="RestSharp.Serializers.NewtonsoftJson" Version="107.3.0" />
     <PackageReference Include="RestSharp.Newtonsoft.Json" Version="1.5.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\Images\" />
   </ItemGroup>
 </Project>
