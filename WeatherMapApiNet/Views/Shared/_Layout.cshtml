@@ -15,10 +15,24 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+    <style>
+        .hero {
+            min-height: 100vh;
+            height: fit-content;
+            width: 100%;
+            background-image: url(../Images/Weather.jpeg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 3rem 0;
+        }
+    </style>
 </head>
 <body>
 
   <!--  <partial name="_CookieConsentPartial" /> --->
+   <div class="hero">
 
     <div class="container body-content">
         @RenderBody()
@@ -27,6 +41,7 @@
             <p>&copy; Powered by OpenWeatherMap</p>
         </footer>
     </div>
+   </div>
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>

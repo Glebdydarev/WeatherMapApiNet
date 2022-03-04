@@ -8,8 +8,8 @@
 
     <div class="container">
 
-        <div class="form-group col-md-offset-3 col-md-5">
-
+        <div class="form-group mx-auto col-md-offset-3 col-md-5">
+            
             <h2>Forecast for the selected city</h2>
 
             <label asp-for="Name"></label>
@@ -35,7 +35,7 @@
             <label asp-for="Weather"></label>
             <span class="badge">@Model.Weather</span>
 
-           
+
 
             <img src="@Model.ImagePath" />
 
@@ -44,24 +44,29 @@
     </div>
 
     <div class="container">
+        
 
-        <div class="form-group col-md-offset-3 col-md-5">
+            <div class="form-group mx-auto col-md-offset-3 col-md-5">
 
-            <form method="get">
-                <button asp-controller="ForecastApp" asp-action="SearchCity" class="btn btn-success">Return</button>
-            </form>
+                <form method="get">
+                    <button asp-controller="ForecastApp" asp-action="SearchCity" class="btn btn-success">Return</button>
+                </form>
+
+            </div>
+         
 
         </div>
-
-    </div>
 
 </div>
 
 <iframe
-        width="600"
+        width="100%"
         height="450"
         style="border:0"
         loading="lazy"
         allowfullscreen
+        margine = "0"
+   
+
         src="https://www.google.com/maps/embed/v1/view?key=@Model.MapsAPIKey&center=@Model.lat,@Model.lon&zoom=8&maptype=satellite">
 </iframe>
